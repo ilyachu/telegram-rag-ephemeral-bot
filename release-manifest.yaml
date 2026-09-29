@@ -1,0 +1,47 @@
+release:
+  name: telegram-rag-ephemeral-bot
+  status: PACKAGE-READY
+  intended_public_target: ilyachu/telegram-rag-ephemeral-bot
+  license: MIT
+  audience: developers who already have a RAG backend and need a Telegram ephemeral transport
+  maintenance_owner: ilyachu
+
+source:
+  basis: newly authored starter kit inspired by production ephemeral Telegram patterns
+  redistribution: owner-authored example code; no vendor binaries; no private runtime state
+  exclusions:
+    - production bot tokens
+    - real chat ids
+    - product-specific RAG / corpus code
+    - internal hostnames, proxies, deploy scripts
+    - customer content and logs
+
+artifacts:
+  - id: readme
+    path: README.md
+    class: owner-authored
+    decision: allow
+  - id: license
+    path: LICENSE
+    class: owner-authored
+    decision: allow
+  - id: env-example
+    path: .env.example
+    class: owner-authored-placeholders
+    decision: allow
+  - id: bot-package
+    path: bot/
+    class: owner-authored
+    decision: allow
+  - id: docs
+    path: docs/
+    class: owner-authored
+    decision: allow
+  - id: tests
+    path: tests/
+    class: owner-authored
+    decision: allow
+  - id: setup-script
+    path: scripts/setup_commands.py
+    class: owner-authored
+    decision: allow
